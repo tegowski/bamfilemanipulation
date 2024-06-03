@@ -23,3 +23,8 @@ This indicates the sam tag to be used for splitting. Use the 2-character indicat
 
 --singleValue [string]
 If you only have a single value you want split (e.g. a single barcode or experiment/replicate indicator), use this value and provide the string of interest.
+
+The third script (bamfilechrommod.py) is used to remove a prefix from the chromosome column within bamfiles. Generally this can be used to remove the "chr", but also any provided prefix
+
+Usage of bamfilechrommod.py
+python bamfilechrommod.py --input [inbam.bam] --output [outbam.bam] --prefix [prefix to remove]
