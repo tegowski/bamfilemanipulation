@@ -24,17 +24,20 @@ bcs = args.barcodeFile
 field = args.field
 filtval = args.singleValue
 
-barcodefile = open(bcs, "r")
-bclist = barcodefile.read().splitlines()
-    
+if bcs is not None:
+	barcodefile = open(bcs, "r")
+	bclist = barcodefile.read().splitlines()
+else:
+	print("No barcode file provided. Hopefully that's OK")
+
 bamfile = pysam.AlignmentFile(infile, "rb")
 outfile = pysam.AlignmentFile(outbam, "wb", template = bamfile)
 
 if filtval == "multi":
     for line in bamfile:
         bcval = line.get_tag(field)
-            if bcval in bclist:
-                outfile.write(line)
+        if bcval in bclist:
+            outfile.write(line)
 else:
     for line in bamfile:
         bcval = line.get_tag(field)
