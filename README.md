@@ -30,8 +30,8 @@ Usage of bamfilechrommod.py
 python bamfilechrommod.py --input [inbam.bam] --output [outbam.bam] [options]
 
 Optional arguments
---prefix A string at the front of the chromosome name to be removed
+--prefix [string] A string at the front of the chromosome name to be removed
 
---addPrefix A string to add to the front of the chromosome name
+--addPrefix [string] A string to add to the front of the chromosome name
 
---suffix A string at the end of the chromosome name to be removed
+--suffix [string] A string at the end of the chromosome name to be removed
