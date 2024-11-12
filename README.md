@@ -9,7 +9,7 @@ Usage of barcodemod.py
 python barcodemod.py --input [inbam.bam] --output [outbam.bam]
 
 
-**The second script (bamsplit.py) can be used for splitting out reads within a bamfile using information with in the tags. The most common use may be to split based on barcodes contained within the CB:Z: tag, though if there are many barcodes to check, this will take a long time.**
+**The second script (bamsplitbarcode.py) can be used for splitting out reads within a bamfile using information with in the tags. The most common use may be to split based on barcodes contained within the CB:Z: tag, though if there are many barcodes to check, this will take a long time.**
 
 Usage of bamsplit.py
 python bamsplit.py --input [inbam.bam] --output [outbam.bam] [options]
