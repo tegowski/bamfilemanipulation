@@ -27,4 +27,11 @@ If you only have a single value you want split (e.g. a single barcode or experim
 The third script (bamfilechrommod.py) is used to remove a prefix from the chromosome column within bamfiles. Generally this can be used to remove the "chr", but also any provided prefix
 
 Usage of bamfilechrommod.py
-python bamfilechrommod.py --input [inbam.bam] --output [outbam.bam] --prefix [prefix to remove]
+python bamfilechrommod.py --input [inbam.bam] --output [outbam.bam] [options]
+
+Optional arguments
+--prefix A string at the front of the chromosome name to be removed
+
+--addPrefix A string to add to the front of the chromosome name
+
+--suffix A string at the end of the chromosome name to be removed
